@@ -1,0 +1,26 @@
+body {
+  background-color: lightyellow;
+}
+      h1  
+        {
+        font-size: 50px;
+        color: #009900; 
+        font-family:Brush Script MT, 
+        Brush Script Std, 
+        cursive;
+        }
+}
+p {
+  
+}
+
+      img {
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            padding: 5px;
+            width: 125px;         
+           }
+
+
+</style>
+</head> 
