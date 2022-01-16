@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Week 2 Team</title>
+  </head>
+  <body>
+    <h2>Requirement 1</h2>
+    <input id="req2Input" type="text" />
+
+    <input id="req3Input" type="text" />
+
+    <button id="sum" onclick = "sum()"> Add</button>
+    <div id ="req3Output"></div>
+
+
+    <button id="req1Button" onclick="reqTwo()">Submit</button>
+    <div id="req2Output"></div>
+
+    <script>
+          // req 2
+        function reqTwo() {
+        const input = document.getElementById('req2Input').value;
+        const outputElement = document.getElementById('req2Output');
+        // make sure input is a number...we can convert it from the string we get from the input value to a number with parseInt.  If this fails it's not a number
+        const inputInt = parseInt(input);
+        if (inputInt !== NaN) {
+          outputElement.innerHTML = 'total: ' + addNumbers(inputInt);
+        }
+      }
+
+        function addNumbers(n){
+            let total =0;
+            for (let i =1; i<= n; i++){
+                total +=i;
+            }
+            return total;
+        }
+
+        //function for requirement 3
+        function sum(){
+            const num1  = document.getElementById("req2Input").value;
+            const num2 = document.getElementById("req3Input").value;
+            const outputSum = document.getElementById("req3Output");
+
+            const num1Float = parseFloat(num1);
+            const num2Float = parseFloat(num2);
+            if ((num1Float !== NaN) & (num2Float !== NaN)){
+                const total = num1Float + num2Float;
+                outputSum.innerHTML = "Total " + total;
+            }
+
+        }
+
+    </script>
+
+</body>
+</html>
