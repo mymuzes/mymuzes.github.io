@@ -80,7 +80,7 @@ function tasksLeft() {
   let done = document.querySelectorAll('li');
   done.forEach((item) => {
     if (item.classList == 'checked') {
-      console.log(item);
+
       item.parentElement.removeChild(item); // 
     }
   });
