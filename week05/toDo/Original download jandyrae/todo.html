@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+    <meta charset='UTF-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title>TODO List</title>
+    <link rel='stylesheet' href='todo.css'>
+    <script src='todo.js' defer></script>
+</head>
+
+<body>
+
+    <!-- Over the next 2 weeks we will practice what we have learned so far by building a 
+        small web application. For this first challenge we will all build a simple To Do tracking application.
+
+        Review the details in the simple design document below, then build the application. 
+        This will be due at the end of Week 6. 
+        Details
+        1. Description: Build a simple web app to manage a ToDo list. It should allow the creation of new tasks, 
+        the viewing of tasks, a process to mark tasks as complete, ability to remove tasks, and the ability to filter by complete/not complete.
+        2. Wireframes for each view.
+            Todo app wireframe
+        3. UI actions
+            Show a list of tasks
+            Add a new task
+            Complete a task
+            Remove a task
+            Filter tasks (complete/incomplete)
+        4. Data sources: localStorage
+            todo: { id : timestamp, content: string, completed: bool }
+            toDoList = [toDo];
+        5. Initial Module list: ToDos.js, localStorage helpers (ls.js), utilities.js
+        6. Colors/Typography/specific Element styling: Student to determine
+        7. Schedule to provide yourself mile markers along the way to help you stay on target.
+           * Review this Trello board. If you want to follow those steps, create a Trello account and copy the board to your account.
+           * There are no dates assigned to the board. Assign yourself some due dates to make sure you complete the project in the allotted time. -->
+
+    <header>
+        <h2>Make and keep your TODO list</h2>
+        <a href='../index.html'>Back to Index</a>
+        <hr>
+    </header>
+    <div class='container' onmousemove="countToDo();">
+        <div id='myDIV' class='header'>
+            <h2>My To Do List</h2>
+            <div id='inputContainer'><input type='text' id='myInput' placeholder='Todo item...'>
+                <div id='addItem' onclick='newItem()' class='addBtn'>ADD +</div>
+            </div>
+            <p id='warning'>You must write something to add to the list!</p>
+        </div>
+
+        <ul id='myUL'>
+            <li>Work out</li>
+            <li>Pay bills</li>
+            <li>Call mom</li>
+        </ul>
+        <!-- tasks left, sort by complete, option to show all -->
+        <div id='bottomRow'>
+            <button id='count'></button>
+            <button onclick='tasksLeft();'>Tasks left</button>
+            <button onclick='showComplete();'>Completed</button>
+            <button onclick="showAll();">Show All</button>
+        </div>
+        <p id="display"></p>
+    </div>
+
+
+</body>
+
+</html>
