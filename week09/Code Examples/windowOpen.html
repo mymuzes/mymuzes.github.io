@@ -1,0 +1,20 @@
+<!doctype html>
+	<head>
+		<title>Open a new Window</title>
+	</head>
+	<body>
+		<h3>Click to open a new Window:</h3>
+
+        <button onclick="createWindow()">Open a Window</button>
+        <p id="result"></p>
+
+        <script>
+        function createWindow() {
+            let url = "https://google.com";
+            let win = window.open(url, "My New Window", "width=300, height=200");
+            document.getElementById("result").innerHTML = win.name + " - " + win.opener.location;
+        }
+        </script>
+
+	</body>
+</html> 

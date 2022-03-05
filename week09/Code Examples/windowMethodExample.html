@@ -1,0 +1,36 @@
+<!doctype html>
+	<head>
+		<title>JS Window Method Examples</title>
+	</head>
+	<body>
+		<h3>Perform various operations on Window object</h3>
+
+        <button onclick="createWindow()">Open a Window</button>
+        <button onclick="closewin()">Close the Window</button>
+        <button onclick="showAlert()">Show Alert in Window</button>
+        
+        <script>
+        var win;
+        // Open window
+        function createWindow() {
+          win = window.open("", "My Window", "width=500, height=200");
+        }
+        
+        function showAlert() {
+            if(win == undefined) {
+                // show alret in main window
+                window.alert("First create the new window, then show alert in it");
+            }
+            else {
+                win.alert("This is an alert");
+            }
+        }
+        
+        // Close window
+        function closewin(){
+            win.close();
+        }
+        </script>
+
+	</body>
+</html> 

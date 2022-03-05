@@ -1,0 +1,27 @@
+<!doctype html>
+	<head>
+		<title>JS Window object properties</title>
+	</head>
+	<body>
+		<h3>Create a Window by clicking</h3>
+
+        <button onclick="createWindow()">Open a Window</button>
+        
+        <script>
+            function createWindow() {
+                  var win = window.open("", "My Window", "width=500, height=200,screenX=100,screenY=100");
+                  // window properties
+                  var isclose = win.closed;
+                  var name = win.name;
+                  // writing in the current document
+                  document.write(isclose +"<br>");
+                  document.write(name +"<br>");
+                  document.write(win.screenY +"<br>");
+                  document.write(win.screenX +"<br>");
+                  // we can access the new window document like this
+                  win.document.write("Hello World!");
+            }
+        </script>
+
+	</body>
+</html> 
