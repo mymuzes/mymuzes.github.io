@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Favorite fruit start</title>
+    <style>
+/* this code adds dashed red box to invalid input */
+input:invalid {
+  border: 2px dashed red;
+}
+/* This code adds sliding colors in the background */
+input:invalid:required {
+  background-image: linear-gradient(to right, pink, lightgreen);
+}
+/* this code add black box to valid code */
+input:valid {
+  border: 2px solid black;
+}
+    </style>
+</head>
+
+<body>
+    <form>
+        <label for="choose">Would you prefer a banana or a cherry?</label>
+        <input id="choose" name="i_like" required pattern="[Bb]anana|[Cc]herry">
+        <button>Submit</button>
+      </form>
+      <p>Click the "Try it" button to display the value of the formtarget attribute of the submit button above.</p>
+
+<p>Notice that the formtarget attribute overrides the HTML form's target attribute ("_self").</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+  var x = document.getElementById("choose").formTarget;
+  document.getElementById("demo").innerHTML = x;
+}
+</script>
+</body>
+
+</html>
