@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>JS Fetch</title>
+    <script>
+    function loadContent () {
+      // (A) FETCH "DUMMY.HTML"
+      fetch("2-dummy.html")
+
+      // (B) RETURN THE RESULT AS TEXT
+      .then((result) => {
+        if (result.status != 200) { throw new Error("Bad Server Response"); }
+        return result.text();
+      })
+
+      // (C) PUT LOADED CONTENT INTO <DIV>
+      .then((content) => {
+        document.getElementById("demoShow").innerHTML = content;
+      })
+      // (D) HANDLE ERRORS - OPTIONAL
+      .catch((error) => { console.log(error); });
+    }
+    </script>
+  </head>
+  <body>
+    <div id="demoShow"></div>
+    <input type="button" value="Load Content" onclick="loadContent()"/>
+  </body>
+</html>
